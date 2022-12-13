@@ -96,6 +96,18 @@ import {onMounted, reactive, ref} from 'vue';
 
 <style scoped>
 
+.bestellingForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
 .formulier {
     display: flex;
     flex-direction: column;
