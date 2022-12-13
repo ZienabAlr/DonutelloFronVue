@@ -5,7 +5,7 @@ const company = ref('');
 const email = ref('');
 const phone = ref('');
 
-const donut = ref('');
+const donutname = ref('');
 const glaze = ref('');
 const toppings = ref('');
 const logo = ref('');
@@ -19,7 +19,7 @@ const postOrder = ()=>{
         company: company.value,
         email: email.value,
         phone: phone.value,
-        donut: donut.value,
+        donutname: donutname.value,
         glaze: glaze.value,
         toppings: toppings.value,
         logo: logo.value,
@@ -50,7 +50,7 @@ const postOrder = ()=>{
 
         <div class="infoLabel">
             <label for="name">Bedrijfsnaam</label>
-            <input class ="inputs inputPadding" type="text" id="name" v-model="name">
+            <input class ="inputs inputPadding" type="text" id="name" v-model="company">
         </div>
        
         <div class="infoLabel">
@@ -70,13 +70,13 @@ const postOrder = ()=>{
 
         <div class="infoLabel">
             <label for="donut">Donut Naam</label>
-            <input class ="inputs inputPadding" type="text" id="donut" v-model="donut">
+            <input class ="inputs inputPadding" type="text" id="donut" v-model="donutname">
 
         </div>
         
         <div class="infoLabel">
             <label for="glaze">Glazuur</label>
-            <select class ="inputs inputPadding" id="glaze" v-model="donut">
+            <select class ="inputs inputPadding" id="glaze" v-model="glaze">
                 
                 <option disabled value="">Kies een glazuur</option>
                 <option>Chocolade</option>
@@ -89,7 +89,7 @@ const postOrder = ()=>{
 
         <div class="infoLabel">
             <label for="toppings">Topping</label>
-            <select class ="inputs inputPadding" id="toppings" v-model="donut">
+            <select class ="inputs inputPadding" id="toppings" v-model="toppings">
             
                 <option disabled value="">Kies een topping</option>
                 <option>Sprinkels Sweet Heaven</option>
@@ -107,7 +107,7 @@ const postOrder = ()=>{
     
         <div class="infoLabel">
             <label for="logoshape">Logo Vorm</label>
-            <select class ="inputs inputPadding" id="logoshape" v-model="donut">
+            <select class ="inputs inputPadding" id="logoshape" v-model="logoshape">
 
                 <option disabled value="">Kies een vorm</option>
                 <option>Rechthoek</option>
@@ -121,7 +121,7 @@ const postOrder = ()=>{
 
         <div class="infoLabel">
             <label for="amount">Aantal</label>
-            <input class ="inputs inputPadding" type="text" id="donut" v-model="donut">
+            <input class ="inputs inputPadding" type="text" id="donut" v-model="amount">
         </div>
         
         <div class="infoLabel">
@@ -132,7 +132,7 @@ const postOrder = ()=>{
     </div>
 
     
-    <button class ="btn" @click.prevent="postMessage">Bestelling sturen</button>
+    <button class ="btn" @click.prevent="postOrder">Bestelling sturen</button>
     
  </div>  
 </template>
