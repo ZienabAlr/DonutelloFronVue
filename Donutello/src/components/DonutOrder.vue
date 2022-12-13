@@ -115,5 +115,12 @@ import {onMounted, reactive, ref} from 'vue';
     justify-content: space-between;
     
 }
+.infoLabel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
 
 </style>
