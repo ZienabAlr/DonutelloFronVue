@@ -13,6 +13,33 @@ const logoshape = ref('');
 const amount = ref('');
 const note = ref('');
 
+const postOrder = ()=>{
+
+    const data = {
+        company: company.value,
+        email: email.value,
+        phone: phone.value,
+        donut: donut.value,
+        glaze: glaze.value,
+        toppings: toppings.value,
+        logo: logo.value,
+        logoshape: logoshape.value,
+        amount: amount.value,
+        note: note.value
+    }
+
+    fetch('http://localhost:3000/api/v1/dunutello', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+}
+
 </script>
 
 <template>
