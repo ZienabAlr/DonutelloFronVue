@@ -92,7 +92,9 @@ import {onMounted, reactive, ref} from 'vue';
         
     </div>
 
-    <a href="#">Bestelling sturen</a>
+    
+    <button class ="btn" @click.prevent="postMessage">Bestelling sturen</button>
+    
  </div>  
 </template>
 
@@ -129,6 +131,19 @@ input, select, textarea {
     border-radius: 0.3rem;
     border: 1px solid #ccc;
     outline: none;
+}
+
+.btn {
+    color: #fff;
+    font-weight: 600;
+    font-family:  'Nunito', sans-serif;
+    font-size: large;
+    background-color: #E72770;
+    border: 0;
+    border-radius: 2rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    cursor: pointer;
 }
 
 </style>
