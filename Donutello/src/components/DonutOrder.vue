@@ -11,17 +11,17 @@ import {onMounted, reactive, ref} from 'vue';
 
         <div class="infoLabel">
             <label for="name">Bedrijfsnaam</label>
-            <input type="text" id="name" v-model="name">
+            <input class ="inputs inputPadding" type="text" id="name" v-model="name">
         </div>
        
         <div class="infoLabel">
             <label for="email">Email</label>
-            <input type="email" id="email" v-model="email">
+            <input class ="inputs inputPadding" type="email" id="email" v-model="email">
         </div>
         
         <div class="infoLabel">
             <label for="phone">Telefoonnummer</label>
-            <input type="tel" id="phone" v-model="phone">
+            <input class ="inputs inputPadding" type="tel" id="phone" v-model="phone">
         </div>
         
     </div>
@@ -31,13 +31,13 @@ import {onMounted, reactive, ref} from 'vue';
 
         <div class="infoLabel">
             <label for="donut">Donut Naam</label>
-            <input type="text" id="donut" v-model="donut">
+            <input class ="inputs inputPadding" type="text" id="donut" v-model="donut">
 
         </div>
         
         <div class="infoLabel">
             <label for="glaze">Glazuur</label>
-            <select id="glaze" v-model="donut">
+            <select class ="inputs inputPadding" id="glaze" v-model="donut">
                 
                 <option disabled value="">Kies een glazuur</option>
                 <option>Chocolade</option>
@@ -50,7 +50,7 @@ import {onMounted, reactive, ref} from 'vue';
 
         <div class="infoLabel">
             <label for="toppings">Topping</label>
-            <select id="toppings" v-model="donut">
+            <select class ="inputs inputPadding" id="toppings" v-model="donut">
             
                 <option disabled value="">Kies een topping</option>
                 <option>Sprinkels Sweet Heaven</option>
@@ -63,12 +63,12 @@ import {onMounted, reactive, ref} from 'vue';
       
         <div class="infoLabel">
             <label for="logo">Logo</label>
-            <input type="file" id="file">
+            <input class ="inputs inputPadding" type="file" id="file">
         </div>
     
         <div class="infoLabel">
             <label for="logoshape">Logo Vorm</label>
-            <select id="logoshape" v-model="donut">
+            <select class ="inputs inputPadding" id="logoshape" v-model="donut">
 
                 <option disabled value="">Kies een vorm</option>
                 <option>Rechthoek</option>
@@ -82,12 +82,12 @@ import {onMounted, reactive, ref} from 'vue';
 
         <div class="infoLabel">
             <label for="amount">Aantal</label>
-            <input type="text" id="donut" v-model="donut">
+            <input class ="inputs inputPadding" type="text" id="donut" v-model="donut">
         </div>
         
         <div class="infoLabel">
             <label for="note">Wil je nog iet zeggen?</label>
-            <textarea id="note" v-model="note"></textarea>
+            <textarea class ="inputs textereaPadding" id="note" v-model="note"></textarea>
         </div>
         
     </div>
@@ -109,7 +109,7 @@ import {onMounted, reactive, ref} from 'vue';
     background-color: #f5f5f5;
     padding: 2rem;
     border-radius: 1rem;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
 }
 .formulier {
     display: flex;
@@ -126,12 +126,22 @@ import {onMounted, reactive, ref} from 'vue';
     margin: 1rem 0;
 }
 
-input, select, textarea {
+.inputs {
     padding: 0.5rem;
     border-radius: 0.3rem;
     border: 1px solid #ccc;
     outline: none;
 }
+
+.inputPadding {
+    padding: 0.5rem;
+}
+
+.textereaPadding {
+    padding: 4rem 0.5rem;
+    
+}
+
 
 .btn {
     color: #fff;
