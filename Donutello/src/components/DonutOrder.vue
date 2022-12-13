@@ -144,7 +144,7 @@ import {onMounted, reactive, ref} from 'vue';
 
 
 .btn {
-    color: #fff;
+    color: rgb(247,226,0);
     font-weight: 600;
     font-family:  'Nunito', sans-serif;
     font-size: large;
