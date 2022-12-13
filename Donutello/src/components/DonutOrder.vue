@@ -91,11 +91,12 @@ import {onMounted, reactive, ref} from 'vue';
         </div>
         
     </div>
+
+    <a href="#">Bestelling sturen</a>
  </div>  
 </template>
 
 <style scoped>
-
 .bestellingForm {
     display: flex;
     flex-direction: column;
@@ -121,6 +122,13 @@ import {onMounted, reactive, ref} from 'vue';
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 1rem 0;
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
 </style>
