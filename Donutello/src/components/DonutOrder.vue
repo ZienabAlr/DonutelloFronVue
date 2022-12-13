@@ -1,6 +1,18 @@
 <script setup>
 import {onMounted, reactive, ref} from 'vue';
 
+const company = ref(''); 
+const email = ref('');
+const phone = ref('');
+
+const donut = ref('');
+const glaze = ref('');
+const toppings = ref('');
+const logo = ref('');
+const logoshape = ref('');
+const amount = ref('');
+const note = ref('');
+
 </script>
 
 <template>
