@@ -7,6 +7,7 @@ import {onMounted, reactive, ref} from 'vue';
  <div>
     <h1>Bestelling formulier</h1>
     <div>
+        <h2>Contact gegevens</h2>
         <label for="name">Bedrijfsnaam</label>
         <input type="text" id="name" v-model="name">
 
@@ -16,7 +17,9 @@ import {onMounted, reactive, ref} from 'vue';
         <label for="phone">Telefoonnummer</label>
         <input type="tel" id="phone" v-model="phone">
     </div>
+    
     <div>
+        <h2>Donut Bestelling</h2>
         <label for="donut">Donut Naam</label>
         <input type="text" id="donut" v-model="donut">
 
