@@ -96,6 +96,12 @@ import {onMounted, reactive, ref} from 'vue';
 
 <style scoped>
 
-
+.formulier {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
 
 </style>
