@@ -40,8 +40,8 @@ const postOrder = ()=>{
             dountname: dountname.value,
             glaze: glaze.value,
             toppings: toppings.value,
-            // logo: logo.value,
-            logoimg: 'logo',
+            logoimg: logoimg.value,
+            // logoimg: 'logo',
             // logoshape: logoshape.value,
             logoshape: 'cirkel',
             amount: 50,
@@ -61,7 +61,7 @@ const postOrder = ()=>{
         dountname.value = "";
         glaze.value = "";
         toppings.value = "";
-//         // // logo.value = "";
+        logoimg.value = "";
 //         // // logoshape.value = "";
 //         // // amount.value = "";
         note.value = "";
