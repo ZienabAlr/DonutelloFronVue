@@ -42,8 +42,8 @@ const postOrder = ()=>{
             toppings: toppings.value,
             // logoimg: logoimg.value,
             logoimg: 'logo',
-            // logoshape: logoshape.value,
-            logoshape: 'cirkel',
+            logoshape: logoshape.value,
+            // logoshape: 'cirkel',
             amount: 50,
             note: note.value
         })
@@ -62,7 +62,7 @@ const postOrder = ()=>{
         glaze.value = "";
         toppings.value = "";
         logoimg.value = "";
-//         // // logoshape.value = "";
+        logoshape.value = "";
 //         // // amount.value = "";
         note.value = "";
       
