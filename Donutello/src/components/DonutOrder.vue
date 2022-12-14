@@ -1,43 +1,95 @@
 <script setup>
 import {onMounted, reactive, ref} from 'vue';
 
-const company = ref(''); 
-const email = ref('');
-const phone = ref('');
+// const company = ref(''); 
+// const email = ref('');
+// const phone = ref('');
 
-const donutname = ref('');
-const glaze = ref('');
-const toppings = ref('');
-const logo = ref('');
-const logoshape = ref('');
-const amount = ref('');
-const note = ref('');
+// const donutname = ref('');
+// const glaze = ref('');
+// const toppings = ref('');
+// const logoimg = ref('');
+// const logoshape = ref('');
+// const amount = ref();
+// const note = ref('');
+
+onMounted(() => { // hier maak ik een functie die de data van de api ophaalt en in de array stopt
+ 
+ const api_url =' http://localhost:3000/api/v1/dunutello';
+ fetch(api_url)
+ .then((response) => response.json()) // parse JSON from request into native JavaScript objects json is a method of the response object that returns a promise that resolves with the result of parsing the body text as JSON 
+ .then((data) => {
+        console.log(data);
+  
+ }); 
+
+ 
+
+});
+
 
 const postOrder = ()=>{
 
-    const data = {
-        company: company.value,
-        email: email.value,
-        phone: phone.value,
-        donutname: donutname.value,
-        glaze: glaze.value,
-        toppings: toppings.value,
-        logo: logo.value,
-        logoshape: logoshape.value,
-        amount: amount.value,
-        note: note.value
-    }
+    // const requestOptions = {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ 
+    //         company: company.value,
+    //         email: email.value,
+    //         phone: phone.value,
+    //         donutname: donutname.value,
+    //         // glaze: glaze.value,
+    //         glaze: "choco",
+    //         // toppings: toppings.value,
+    //         toppings: "sprinkels",
+    //         // logo: logo.value,
+    //         logo: "logo",
+    //         // logoshape: logoshape.value,
+    //         logoshape: "cirkel",
+    //         amount: 50,
+    //         note: note.value
+    //     })
+    // };
 
-    fetch('http://localhost:3000/api/v1/dunutello', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+    const api_url = 'http://localhost:3000/api/v1/dunutello';
+
+    fetch(api_url, 
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                company: 'lala',
+                email: 'lala@gmail.com',
+                phone: '0612345678',
+                dountname: 'lala donut',
+                // glaze: glaze.value,
+                glaze: 'choco',
+                // toppings: toppings.value,
+                toppings: 'sprinkels',
+                // logo: logo.value,
+                logoimg: 'logo',
+                // logoshape: logoshape.value,
+                logoshape: 'cirkel',
+                amount: 50,
+                note: 'niks'
+            })
+    
+        })
+    .then((response) => response.json()) 
+    .then((data) => { 
+        console.log(data);
+//         // company.value = "";  
+//         // email.value = "";
+//         // phone.value = "";
+//         // donutname.value = "";
+//         // // glaze.value = "";
+//         // // toppings.value = "";
+//         // // logo.value = "";
+//         // // logoshape.value = "";
+//         // // amount.value = "";
+//         // note.value = "";
+      
+      });
 }
 
 </script>
