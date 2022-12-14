@@ -8,8 +8,8 @@ const phone = ref('');
 const dountname = ref('');
 const glaze = ref('');
 const toppings = ref('');
-const logoimg = ref('');
-// const logoshape = ref('');
+// const logoimg = ref('');
+const logoshape = ref('');
 // const amount = ref();
 const note = ref('');
 
@@ -40,8 +40,8 @@ const postOrder = ()=>{
             dountname: dountname.value,
             glaze: glaze.value,
             toppings: toppings.value,
-            logoimg: logoimg.value,
-            // logoimg: 'logo',
+            // logoimg: logoimg.value,
+            logoimg: 'logo',
             // logoshape: logoshape.value,
             logoshape: 'cirkel',
             amount: 50,
