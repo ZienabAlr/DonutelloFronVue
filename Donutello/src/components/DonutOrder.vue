@@ -1,23 +1,23 @@
 <script setup>
 import {onMounted, reactive, ref} from 'vue';
 
-// const company = ref(''); 
-// const email = ref('');
-// const phone = ref('');
+const company = ref(''); 
+const email = ref('');
+const phone = ref('');
 
-// const donutname = ref('');
+const dountname = ref('');
 // const glaze = ref('');
 // const toppings = ref('');
 // const logoimg = ref('');
 // const logoshape = ref('');
 // const amount = ref();
-// const note = ref('');
+const note = ref('');
 
-onMounted(() => { // hier maak ik een functie die de data van de api ophaalt en in de array stopt
+onMounted(() => { 
  
  const api_url =' http://localhost:3000/api/v1/dunutello';
  fetch(api_url)
- .then((response) => response.json()) // parse JSON from request into native JavaScript objects json is a method of the response object that returns a promise that resolves with the result of parsing the body text as JSON 
+ .then((response) => response.json()) 
  .then((data) => {
         console.log(data);
   
@@ -30,64 +30,43 @@ onMounted(() => { // hier maak ik een functie die de data van de api ophaalt en 
 
 const postOrder = ()=>{
 
-    // const requestOptions = {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ 
-    //         company: company.value,
-    //         email: email.value,
-    //         phone: phone.value,
-    //         donutname: donutname.value,
-    //         // glaze: glaze.value,
-    //         glaze: "choco",
-    //         // toppings: toppings.value,
-    //         toppings: "sprinkels",
-    //         // logo: logo.value,
-    //         logo: "logo",
-    //         // logoshape: logoshape.value,
-    //         logoshape: "cirkel",
-    //         amount: 50,
-    //         note: note.value
-    //     })
-    // };
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+           company: company.value,
+            email: email.value,
+            phone: phone.value,
+            dountname: dountname.value,
+            // glaze: glaze.value,
+            glaze: 'choco',
+            // toppings: toppings.value,
+            toppings: 'sprinkels',
+            // logo: logo.value,
+            logoimg: 'logo',
+            // logoshape: logoshape.value,
+            logoshape: 'cirkel',
+            amount: 50,
+            note: note.value
+        })
+    };
 
     const api_url = 'http://localhost:3000/api/v1/dunutello';
 
-    fetch(api_url, 
-        {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                company: 'lala',
-                email: 'lala@gmail.com',
-                phone: '0612345678',
-                dountname: 'lala donut',
-                // glaze: glaze.value,
-                glaze: 'choco',
-                // toppings: toppings.value,
-                toppings: 'sprinkels',
-                // logo: logo.value,
-                logoimg: 'logo',
-                // logoshape: logoshape.value,
-                logoshape: 'cirkel',
-                amount: 50,
-                note: 'niks'
-            })
-    
-        })
+    fetch(api_url, requestOptions )
     .then((response) => response.json()) 
     .then((data) => { 
         console.log(data);
-//         // company.value = "";  
-//         // email.value = "";
-//         // phone.value = "";
-//         // donutname.value = "";
+        company.value = "";  
+        email.value = "";
+        phone.value = "";
+        dountname.value = "";
 //         // // glaze.value = "";
 //         // // toppings.value = "";
 //         // // logo.value = "";
 //         // // logoshape.value = "";
 //         // // amount.value = "";
-//         // note.value = "";
+        note.value = "";
       
       });
 }
@@ -122,7 +101,7 @@ const postOrder = ()=>{
 
         <div class="infoLabel">
             <label for="donut">Donut Naam</label>
-            <input class ="inputs inputPadding" type="text" id="donut" v-model="donutname">
+            <input class ="inputs inputPadding" type="text" id="donut" v-model="dountname">
 
         </div>
         
