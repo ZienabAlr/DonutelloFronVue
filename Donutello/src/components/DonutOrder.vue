@@ -39,8 +39,8 @@ const postOrder = ()=>{
             phone: phone.value,
             dountname: dountname.value,
             glaze: glaze.value,
-            // toppings: toppings.value,
-            toppings: 'sprinkels',
+            toppings: toppings.value,
+            // toppings: 'sprinkels',
             // logo: logo.value,
             logoimg: 'logo',
             // logoshape: logoshape.value,
@@ -61,7 +61,7 @@ const postOrder = ()=>{
         phone.value = "";
         dountname.value = "";
         glaze.value = "";
-//         // // toppings.value = "";
+        toppings.value = "";
 //         // // logo.value = "";
 //         // // logoshape.value = "";
 //         // // amount.value = "";
