@@ -38,8 +38,8 @@ const postOrder = ()=>{
             email: email.value,
             phone: phone.value,
             dountname: dountname.value,
-            // glaze: glaze.value,
-            glaze: 'choco',
+            glaze: glaze.value,
+            // glaze: 'choco',
             // toppings: toppings.value,
             toppings: 'sprinkels',
             // logo: logo.value,
@@ -61,7 +61,7 @@ const postOrder = ()=>{
         email.value = "";
         phone.value = "";
         dountname.value = "";
-//         // // glaze.value = "";
+        glaze.value = "";
 //         // // toppings.value = "";
 //         // // logo.value = "";
 //         // // logoshape.value = "";
