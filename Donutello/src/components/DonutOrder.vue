@@ -7,7 +7,7 @@ const phone = ref('');
 
 const dountname = ref('');
 const glaze = ref('');
-// const toppings = ref('');
+const toppings = ref('');
 // const logoimg = ref('');
 // const logoshape = ref('');
 // const amount = ref();
@@ -39,7 +39,6 @@ const postOrder = ()=>{
             phone: phone.value,
             dountname: dountname.value,
             glaze: glaze.value,
-            // glaze: 'choco',
             // toppings: toppings.value,
             toppings: 'sprinkels',
             // logo: logo.value,
