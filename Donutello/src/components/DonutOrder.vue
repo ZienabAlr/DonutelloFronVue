@@ -6,7 +6,7 @@ const email = ref('');
 const phone = ref('');
 
 const dountname = ref('');
-// const glaze = ref('');
+const glaze = ref('');
 // const toppings = ref('');
 // const logoimg = ref('');
 // const logoshape = ref('');
